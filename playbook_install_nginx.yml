@@ -1,0 +1,23 @@
+---
+- name: install nginx & start services
+  hosts: loadbalancer
+  become: true
+  
+  tasks:
+  - name: install nginx
+    yum:
+      name: nginx
+      state: latest
+    
+  - name: start nginx    
+    service:
+      name: nginx
+      state: started
+      
+      
+# Check if installed: yum list installed | grep nginx
+# check servcie:  ps -ef | grep nginx
+
+# ansible-playbook -i <location of inventory/hosts> playbook_install_nginx.yml 
+#    pass the check param to just check the playbook to see if it will run. --check
+      
