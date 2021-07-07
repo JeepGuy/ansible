@@ -19,5 +19,5 @@
 # check servcie:  ps -ef | grep nginx
 
 # ansible-playbook -i <location of inventory/hosts> playbook_install_nginx.yml 
-#    pass the check param to just check the playbook to see if it will run. --check
+# pass the check param to just check the playbook to see if it will run. --check
       
