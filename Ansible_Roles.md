@@ -40,6 +40,11 @@ define standards about how files and folders are organized within the project.
 
 galaxy.ansible.com   Has sample roles etc...
 
+### Create a role
+
+ansible-galaxy init <Name-of-Role>
+
+
 
 
 
