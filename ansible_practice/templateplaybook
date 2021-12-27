@@ -1,0 +1,8 @@
+-
+  name: Test Template playbook
+  hosts: localhost
+  vars: 
+    my_name: JeepRadioGuy
+  tasks:
+    -  debug:
+            msg: "My name is {{ my_name }}"

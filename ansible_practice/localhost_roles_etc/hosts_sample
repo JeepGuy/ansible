@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  user: root
+  port: 22
+  gather_facts: true
+    - { role: selinx, tags: selinux }
+    - { role: httpd, tags: httpd }
+    - { role: resolver, tags: resolver }
+
