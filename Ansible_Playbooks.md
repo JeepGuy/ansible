@@ -1,4 +1,4 @@
-Ansible Playbooks
+# Ansible Playbooks
 =================
 
 Playbook - a set of instructions for ansible to execute on a or a group of
@@ -14,6 +14,7 @@ Playbook - A single YAML File (contains a play)
 
 sample playbook:
 
+```
 # Simple Ansible Playbook1.yml
 -
   name: Play 1
@@ -35,12 +36,13 @@ sample playbook:
         name: httpd
         stated: started
   #############################
-
+```
 A Playbook is a list of dictionaries in YAML terms
 
 Tasks are a list (ordered collection so order matters)
 
-# Simple Ansible Playbook1.yml
+## Simple Ansible Playbook1.yml
+```
 -
   name: Play 1
   hosts: localhost, or webhost etc (defined in inventory must be at Play level)
@@ -62,7 +64,7 @@ Tasks are a list (ordered collection so order matters)
       service:
         name: httpd
         stated: started
-
+```
 
 Ansible Modules:
 Different actions run by tasks.
@@ -72,7 +74,7 @@ There are hundreds of modules out of the box from Ansible.
  > on the website OR
  run command:  ansible-doc-l  (L) on your ansible system for a listed
 
- RUN the Ansible Playbook
+ ### RUN the Ansible Playbook
  ------------------------
 
 Execute Ansible Playbook:
@@ -82,8 +84,8 @@ ansible-playbook --help   :::: for help...
 
 
 
-# Update the playbook with a play to "Execute a script on all web server nodes". The script is located at /tmp/install_script.sh
-
+#### Update the playbook with a play to "Execute a script on all web server nodes". The script is located at /tmp/install_script.sh
+```
 -
 name: Execute a script on all web server nodes
 hosts: web_nodes
